@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company\Models;
+<?php namespace Opiy\Company\Models;
 
 use October\Rain\Database\Model as BaseModel;
 

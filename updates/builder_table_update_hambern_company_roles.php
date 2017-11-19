@@ -1,14 +1,14 @@
-<?php namespace Hambern\Company\Updates;
+<?php namespace Opiy\Company\Updates;
 
-use Hambern\Company\Models\Role;
+use Opiy\Company\Models\Role;
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableUpdateHambernCompanyRoles extends Migration
+class BuilderTableUpdateOpiyCompanyRoles extends Migration
 {
     public function up()
     {
-        Schema::table('hambern_company_roles', function ($table) {
+        Schema::table('opiy_company_roles', function ($table) {
             $table->string('slug')->index();
         });
 
@@ -21,7 +21,7 @@ class BuilderTableUpdateHambernCompanyRoles extends Migration
 
     public function down()
     {
-        Schema::table('hambern_company_roles', function ($table) {
+        Schema::table('opiy_company_roles', function ($table) {
             $table->dropColumn('slug');
         });
     }

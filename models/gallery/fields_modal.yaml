@@ -4,10 +4,10 @@
 
 fields:
     name:
-        label: hambern.company::lang.labels.name
+        label: opiy.company::lang.labels.name
         span: auto
     published_at:
-        label: hambern.company::lang.labels.published_at
+        label: opiy.company::lang.labels.published_at
         type: datepicker
         default: now
         mode: date
@@ -16,16 +16,16 @@ fields:
 tabs:
   fields:
     pictures:
-        label: hambern.company::lang.labels.pictures
+        label: opiy.company::lang.labels.pictures
         type: fileupload
         mode: image
         span: full
         imageHeight: 260
         imageWidth: 260
-        label: hambern.company::lang.labels.pictures
+        label: opiy.company::lang.labels.pictures
     description:
-        label: hambern.company::lang.labels.description
+        label: opiy.company::lang.labels.description
         type: richeditor
         size: giant
         span: full
-        tab: hambern.company::lang.labels.description
+        tab: opiy.company::lang.labels.description

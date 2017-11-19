@@ -3,29 +3,29 @@
 # ===================================
 
 # Record name
-name: hambern.company::lang.project.label
+name: opiy.company::lang.project.label
 
 # Model Form Field configuration
-form: $/hambern/company/models/project/fields.yaml
+form: $/opiy/company/models/project/fields.yaml
 
 # Model Class name
-modelClass: Hambern\Company\Models\Project
+modelClass: Opiy\Company\Models\Project
 
 # Default redirect location
-defaultRedirect: hambern/company/projects
+defaultRedirect: opiy/company/projects
 
 # Create page
 create:
-    title: hambern.company::lang.project.create_title
-    redirect: hambern/company/projects/update/:id
-    redirectClose: hambern/company/projects
+    title: opiy.company::lang.project.create_title
+    redirect: opiy/company/projects/update/:id
+    redirectClose: opiy/company/projects
 
 # Update page
 update:
-    title: hambern.company::lang.project.update_title
-    redirect: hambern/company/projects
-    redirectClose: hambern/company/projects
+    title: opiy.company::lang.project.update_title
+    redirect: opiy/company/projects
+    redirectClose: opiy/company/projects
 
 # Preview page
 preview:
-    title: hambern.company::lang.project.preview_title
+    title: opiy.company::lang.project.preview_title

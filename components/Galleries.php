@@ -1,18 +1,18 @@
-<?php namespace Hambern\Company\Components;
+<?php namespace Opiy\Company\Components;
 
-use Hambern\Company\Models\Gallery;
+use Opiy\Company\Models\Gallery;
 use Illuminate\Support\Facades\Lang;
-use Hambern\Company\Models\Tag;
+use Opiy\Company\Models\Tag;
 
 class Galleries extends Component
 {
-    public $table = 'hambern_company_galleries';
+    public $table = 'opiy_company_galleries';
 
     public function componentDetails()
     {
         return [
-            'name' => 'hambern.company::lang.components.galleries.name',
-            'description' => 'hambern.company::lang.components.galleries.description',
+            'name' => 'opiy.company::lang.components.galleries.name',
+            'description' => 'opiy.company::lang.components.galleries.description',
         ];
     }
 
@@ -60,25 +60,25 @@ class Galleries extends Component
     {
         $properties = parent::defineProperties();
         $properties['tagIdentifier'] = [
-            'title' => 'hambern.company::lang.tags.tag_identifier',
-            'description' => 'hambern.company::lang.descriptions.tag_identifier',
+            'title' => 'opiy.company::lang.tags.tag_identifier',
+            'description' => 'opiy.company::lang.descriptions.tag_identifier',
             'type' => 'dropdown',
             'options' => ['id' => 'id', 'slug' => 'slug'],
             'default' => 'id',
-            'group' => 'hambern.company::lang.labels.filters',
+            'group' => 'opiy.company::lang.labels.filters',
         ];
         $properties['filterTag'] = [
-            'title' => 'hambern.company::lang.tags.menu_label',
-            'description' => 'hambern.company::lang.descriptions.filter_tags',
+            'title' => 'opiy.company::lang.tags.menu_label',
+            'description' => 'opiy.company::lang.descriptions.filter_tags',
             'type' => 'dropdown',
-            'group' => 'hambern.company::lang.labels.filters',
+            'group' => 'opiy.company::lang.labels.filters',
         ];
         return $properties;
     }
 
     public function getFilterTagOptions()
     {
-        $options = [Lang::get('hambern.company::lang.labels.show_all')];
+        $options = [Lang::get('opiy.company::lang.labels.show_all')];
         $tags = Tag::has('galleries')->get();
         $id_attribute = $this->property('tagIdentifier', 'id');
         $options += $tags->lists('name', $id_attribute);

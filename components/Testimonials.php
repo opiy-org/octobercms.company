@@ -1,16 +1,16 @@
-<?php namespace Hambern\Company\Components;
+<?php namespace Opiy\Company\Components;
 
-use Hambern\Company\Models\Testimonial;
+use Opiy\Company\Models\Testimonial;
 
 class Testimonials extends Component
 {
-    public $table = 'hambern_company_testimonials';
+    public $table = 'opiy_company_testimonials';
 
     public function componentDetails()
     {
         return [
-            'name' => 'hambern.company::lang.components.testimonials.name',
-            'description' => 'hambern.company::lang.components.testimonials.description',
+            'name' => 'opiy.company::lang.components.testimonials.name',
+            'description' => 'opiy.company::lang.components.testimonials.description',
         ];
     }
 
@@ -50,8 +50,8 @@ class Testimonials extends Component
         $properties = parent::defineProperties();
 
         $properties['modelIdentifier'] = [
-            'title' => 'hambern.company::lang.misc.model_identifier',
-            'description' => 'hambern.company::lang.descriptions.model_identifier',
+            'title' => 'opiy.company::lang.misc.model_identifier',
+            'description' => 'opiy.company::lang.descriptions.model_identifier',
             'type' => 'dropdown',
             'options' => ['id' => 'id'],
             'default' => 'id',

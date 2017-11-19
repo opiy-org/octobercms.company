@@ -1,8 +1,8 @@
 <div data-control="toolbar">
     <a
-            href="<?= Backend::url('hambern/company/projects/create') ?>"
+            href="<?= Backend::url('opiy/company/projects/create') ?>"
             class="btn btn-primary oc-icon-plus">
-        <?= e(trans('hambern.company::lang.project.new')) ?>
+        <?= e(trans('opiy.company::lang.project.new')) ?>
     </a>
 
     <button
@@ -12,7 +12,7 @@
             checked: $('.control-list').listWidget('getChecked')
         })"
             data-request="onDelete"
-            data-request-confirm="<?= e(trans('hambern.company::lang.projects.delete_selected_confirm')) ?>"
+            data-request-confirm="<?= e(trans('opiy.company::lang.projects.delete_selected_confirm')) ?>"
             data-trigger-action="enable"
             data-trigger=".control-list input[type=checkbox]"
             data-trigger-condition="checked"

@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company;
+<?php namespace Opiy\Company;
 
 use Backend;
 use Backend\Facades\BackendAuth;
@@ -18,9 +18,9 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'hambern.company::lang.plugin.name',
-            'description' => 'hambern.company::lang.plugin.description',
-            'author' => 'Hambern',
+            'name' => 'opiy.company::lang.plugin.name',
+            'description' => 'opiy.company::lang.plugin.description',
+            'author' => 'Opiy',
             'icon' => 'icon-building',
         ];
     }
@@ -29,59 +29,65 @@ class Plugin extends PluginBase
     {
         return [
             'company' => [
-                'label' => 'hambern.company::lang.plugin.name',
-                'url' => Backend::url('hambern/company/' . $this->startPage()),
+                'label' => 'opiy.company::lang.plugin.name',
+                'url' => Backend::url('opiy/company/' . $this->startPage()),
                 'icon' => 'icon-building',
-                'permissions' => ['hambern.company.*'],
+                'permissions' => ['opiy.company.*'],
                 'order' => 500,
                 'sideMenu' => [
                     'employees' => [
-                        'label' => 'hambern.company::lang.employees.menu_label',
+                        'label' => 'opiy.company::lang.employees.menu_label',
                         'icon' => 'icon-user',
-                        'url' => Backend::url('hambern/company/employees'),
-                        'permissions' => ['hambern.company.access_employees'],
+                        'url' => Backend::url('opiy/company/employees'),
+                        'permissions' => ['opiy.company.access_employees'],
                     ],
                     'roles' => [
-                        'label' => 'hambern.company::lang.roles.menu_label',
+                        'label' => 'opiy.company::lang.roles.menu_label',
                         'icon' => 'icon-briefcase',
-                        'url' => Backend::url('hambern/company/roles'),
-                        'permissions' => ['hambern.company.access_employees'],
+                        'url' => Backend::url('opiy/company/roles'),
+                        'permissions' => ['opiy.company.access_employees'],
                     ],
                     'projects' => [
-                        'label' => 'hambern.company::lang.projects.menu_label',
+                        'label' => 'opiy.company::lang.projects.menu_label',
                         'icon' => 'icon-wrench',
-                        'url' => Backend::url('hambern/company/projects'),
-                        'permissions' => ['hambern.company.access_projects'],
+                        'url' => Backend::url('opiy/company/projects'),
+                        'permissions' => ['opiy.company.access_projects'],
                     ],
                     'services' => [
-                        'label' => 'hambern.company::lang.services.menu_label',
+                        'label' => 'opiy.company::lang.services.menu_label',
                         'icon' => 'icon-certificate',
-                        'url' => Backend::url('hambern/company/services'),
-                        'permissions' => ['hambern.company.access_services'],
+                        'url' => Backend::url('opiy/company/services'),
+                        'permissions' => ['opiy.company.access_services'],
+                    ],
+                    'properties' => [
+                        'label' => 'opiy.company::lang.properties.menu_label',
+                        'icon' => 'icon-location-arrow',
+                        'url' => Backend::url('opiy/company/properties'),
+                        'permissions' => ['opiy.company.access_properties'],
                     ],
                     'galleries' => [
-                        'label' => 'hambern.company::lang.galleries.menu_label',
+                        'label' => 'opiy.company::lang.galleries.menu_label',
                         'icon' => 'icon-photo',
-                        'url' => Backend::url('hambern/company/galleries'),
-                        'permissions' => ['hambern.company.access_galleries'],
+                        'url' => Backend::url('opiy/company/galleries'),
+                        'permissions' => ['opiy.company.access_galleries'],
                     ],
                     'testimonials' => [
-                        'label' => 'hambern.company::lang.testimonials.menu_label',
+                        'label' => 'opiy.company::lang.testimonials.menu_label',
                         'icon' => 'icon-comment',
-                        'url' => Backend::url('hambern/company/testimonials'),
-                        'permissions' => ['hambern.company.access_testimonials'],
+                        'url' => Backend::url('opiy/company/testimonials'),
+                        'permissions' => ['opiy.company.access_testimonials'],
                     ],
                     'links' => [
-                        'label' => 'hambern.company::lang.links.menu_label',
+                        'label' => 'opiy.company::lang.links.menu_label',
                         'icon' => 'icon-link',
-                        'url' => Backend::url('hambern/company/links'),
-                        'permissions' => ['hambern.company.access_links'],
+                        'url' => Backend::url('opiy/company/links'),
+                        'permissions' => ['opiy.company.access_links'],
                     ],
                     'tags' => [
-                        'label' => 'hambern.company::lang.tags.menu_label',
+                        'label' => 'opiy.company::lang.tags.menu_label',
                         'icon' => 'icon-tag',
-                        'url' => Backend::url('hambern/company/tags'),
-                        'permissions' => ['hambern.company.access_tags'],
+                        'url' => Backend::url('opiy/company/tags'),
+                        'permissions' => ['opiy.company.access_tags'],
                     ],
                 ],
             ],
@@ -92,7 +98,7 @@ class Plugin extends PluginBase
     {
         $user = BackendAuth::getUser();
         $permissions = array_reverse(array_keys($this->registerPermissions()));
-        if (!isset($user->permissions['superuser']) && $user->hasAccess('hambern.company.*')) {
+        if (!isset($user->permissions['superuser']) && $user->hasAccess('opiy.company.*')) {
             foreach ($permissions as $access) {
                 if ($user->hasAccess($access)) {
                     $page = explode('_', $access)[1];
@@ -105,37 +111,37 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'hambern.company.access_employees' => [
-                'label' => 'hambern.company::lang.employee.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'opiy.company.access_employees' => [
+                'label' => 'opiy.company::lang.employee.list_title',
+                'tab' => 'opiy.company::lang.plugin.name',
             ],
-            'hambern.company.access_projects' => [
-                'label' => 'hambern.company::lang.project.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'opiy.company.access_projects' => [
+                'label' => 'opiy.company::lang.project.list_title',
+                'tab' => 'opiy.company::lang.plugin.name',
             ],
-            'hambern.company.access_services' => [
-                'label' => 'hambern.company::lang.service.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'opiy.company.access_services' => [
+                'label' => 'opiy.company::lang.service.list_title',
+                'tab' => 'opiy.company::lang.plugin.name',
             ],
-            'hambern.company.access_galleries' => [
-                'label' => 'hambern.company::lang.gallery.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'opiy.company.access_galleries' => [
+                'label' => 'opiy.company::lang.gallery.list_title',
+                'tab' => 'opiy.company::lang.plugin.name',
             ],
-            'hambern.company.access_links' => [
-                'label' => 'hambern.company::lang.link.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'opiy.company.access_links' => [
+                'label' => 'opiy.company::lang.link.list_title',
+                'tab' => 'opiy.company::lang.plugin.name',
             ],
-            'hambern.company.access_testimonials' => [
-                'label' => 'hambern.company::lang.testimonial.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'opiy.company.access_testimonials' => [
+                'label' => 'opiy.company::lang.testimonial.list_title',
+                'tab' => 'opiy.company::lang.plugin.name',
             ],
-            'hambern.company.access_tags' => [
-                'label' => 'hambern.company::lang.tag.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'opiy.company.access_tags' => [
+                'label' => 'opiy.company::lang.tag.list_title',
+                'tab' => 'opiy.company::lang.plugin.name',
             ],
-            'hambern.company.access_company' => [
-                'label' => 'hambern.company::lang.company.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'opiy.company.access_company' => [
+                'label' => 'opiy.company::lang.company.list_title',
+                'tab' => 'opiy.company::lang.plugin.name',
             ],
         ];
     }
@@ -143,15 +149,15 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Hambern\Company\Components\Employees' => 'Employees',
-            'Hambern\Company\Components\Roles' => 'Roles',
-            'Hambern\Company\Components\Projects' => 'Projects',
-            'Hambern\Company\Components\Services' => 'Services',
-            'Hambern\Company\Components\Galleries' => 'Galleries',
-            'Hambern\Company\Components\Company' => 'Company',
-            'Hambern\Company\Components\Testimonials' => 'Testimonials',
-            'Hambern\Company\Components\Links' => 'Links',
-            'Hambern\Company\Components\Tags' => 'Tags',
+            'Opiy\Company\Components\Employees' => 'Employees',
+            'Opiy\Company\Components\Roles' => 'Roles',
+            'Opiy\Company\Components\Projects' => 'Projects',
+            'Opiy\Company\Components\Services' => 'Services',
+            'Opiy\Company\Components\Galleries' => 'Galleries',
+            'Opiy\Company\Components\Company' => 'Company',
+            'Opiy\Company\Components\Testimonials' => 'Testimonials',
+            'Opiy\Company\Components\Links' => 'Links',
+            'Opiy\Company\Components\Tags' => 'Tags',
         ];
     }
 
@@ -159,14 +165,14 @@ class Plugin extends PluginBase
     {
         return [
             'company' => [
-                'label' => 'hambern.company::lang.plugin.name',
-                'description' => 'hambern.company::lang.settings.description',
+                'label' => 'opiy.company::lang.plugin.name',
+                'description' => 'opiy.company::lang.settings.description',
                 'category' => 'system::lang.system.categories.system',
                 'icon' => 'icon-building-o',
-                'class' => 'Hambern\Company\Models\Company',
+                'class' => 'Opiy\Company\Models\Company',
                 'order' => 500,
-                'keywords' => 'hambern.company::lang.settings.label',
-                'permissions' => ['hambern.company.access_company'],
+                'keywords' => 'opiy.company::lang.settings.label',
+                'permissions' => ['opiy.company.access_company'],
             ],
         ];
     }

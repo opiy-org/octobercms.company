@@ -4,15 +4,15 @@
 
 columns:
     id:
-        label: hambern.company::lang.labels.id
+        label: opiy.company::lang.labels.id
     source:
-        label: hambern.company::lang.labels.source
+        label: opiy.company::lang.labels.source
     content:
-        label: hambern.company::lang.labels.content
+        label: opiy.company::lang.labels.content
         select: concat(substr(content, 1, 50),"...")
     published_at:
-        label: hambern.company::lang.labels.published_at
+        label: opiy.company::lang.labels.published_at
         type: date
     updated_at:
-        label: hambern.company::lang.labels.updated_at
+        label: opiy.company::lang.labels.updated_at
         type: date

@@ -1,0 +1,39 @@
+fields:
+    name:
+        label: 'opiy.company::lang.labels.name'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    published_at:
+        label: 'opiy.company::lang.labels.published_at'
+        type: datepicker
+        default: now
+        mode: date
+        span: auto
+    type:
+        label: 'opiy.company::lang.labels.type'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+tabs:
+    fields:
+        description:
+            type: richeditor
+            size: giant
+            label: 'opiy.company::lang.labels.description'
+            span: full
+            tab: 'opiy.company::lang.labels.description'
+        icon:
+            label: 'opiy.company::lang.labels.icon'
+            span: left
+            default: fa-
+            comment: 'opiy.company::lang.projects.icon_comment'
+            tab: 'opiy.company::lang.labels.description'
+            type: text
+        default_value:
+            label: 'opiy.company::lang.labels.default_value'
+            span: right
+            type: text
+            tab: 'opiy.company::lang.labels.description'
+

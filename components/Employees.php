@@ -1,18 +1,18 @@
-<?php namespace Hambern\Company\Components;
+<?php namespace Opiy\Company\Components;
 
-use Hambern\Company\Models\Employee;
+use Opiy\Company\Models\Employee;
 use Illuminate\Support\Facades\Lang;
-use Hambern\Company\Models\Role;
+use Opiy\Company\Models\Role;
 
 class Employees extends Component
 {
-    public $table = 'hambern_company_employees';
+    public $table = 'opiy_company_employees';
 
     public function componentDetails()
     {
         return [
-            'name' => 'hambern.company::lang.components.employees.name',
-            'description' => 'hambern.company::lang.components.employees.description',
+            'name' => 'opiy.company::lang.components.employees.name',
+            'description' => 'opiy.company::lang.components.employees.description',
         ];
     }
 
@@ -60,25 +60,25 @@ class Employees extends Component
     {
         $properties = parent::defineProperties();
         $properties['roleIdentifier'] = [
-            'title' => 'hambern.company::lang.roles.role_identifier',
-            'description' => 'hambern.company::lang.descriptions.role_identifier',
+            'title' => 'opiy.company::lang.roles.role_identifier',
+            'description' => 'opiy.company::lang.descriptions.role_identifier',
             'type' => 'dropdown',
             'options' => ['id' => 'id', 'slug' => 'slug'],
             'default' => 'id',
-            'group' => 'hambern.company::lang.labels.filters',
+            'group' => 'opiy.company::lang.labels.filters',
         ];
         $properties['filterRole'] = [
-            'title' => 'hambern.company::lang.roles.menu_label',
-            'description' => 'hambern.company::lang.descriptions.filter_roles',
+            'title' => 'opiy.company::lang.roles.menu_label',
+            'description' => 'opiy.company::lang.descriptions.filter_roles',
             'type' => 'dropdown',
-            'group' => 'hambern.company::lang.labels.filters',
+            'group' => 'opiy.company::lang.labels.filters',
         ];
         return $properties;
     }
 
     public function getFilterRoleOptions()
     {
-        $options = [Lang::get('hambern.company::lang.labels.show_all')];
+        $options = [Lang::get('opiy.company::lang.labels.show_all')];
         $roles = Role::has('employees')->get();
         $id_attribute = $this->property('roleIdentifier', 'id');
         $options += $roles->lists('name', $id_attribute);

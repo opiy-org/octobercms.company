@@ -1,17 +1,17 @@
-<?php namespace Hambern\Company\Components;
+<?php namespace Opiy\Company\Components;
 
-use Hambern\Company\Models\Link;
+use Opiy\Company\Models\Link;
 
 class Links extends Component
 {
 
-    public $table = 'hambern_company_links';
+    public $table = 'opiy_company_links';
 
     public function componentDetails()
     {
         return [
-            'name' => 'hambern.company::lang.components.links.name',
-            'description' => 'hambern.company::lang.components.links.description'
+            'name' => 'opiy.company::lang.components.links.name',
+            'description' => 'opiy.company::lang.components.links.description'
         ];
     }
 

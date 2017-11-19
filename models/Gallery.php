@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company\Models;
+<?php namespace Opiy\Company\Models;
 
 /**
  * Gallery Model
@@ -15,7 +15,7 @@ class Gallery extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'hambern_company_galleries';
+    public $table = 'opiy_company_galleries';
     /**
      * @var array Relations
      */
@@ -24,8 +24,8 @@ class Gallery extends Model
     public $belongsTo = [];
     public $belongsToMany = [
         'tags' => [
-            'Hambern\Company\Models\Tag',
-            'table' => 'hambern_company_pivots',
+            'Opiy\Company\Models\Tag',
+            'table' => 'opiy_company_pivots',
         ],
     ];
     public $morphTo = [];

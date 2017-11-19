@@ -1,8 +1,8 @@
-<?php namespace Hambern\Company\Controllers;
+<?php namespace Opiy\Company\Controllers;
 
 use BackendMenu;
 use Flash;
-use Hambern\Company\Models\Employee;
+use Opiy\Company\Models\Employee;
 use Lang;
 
 /**
@@ -11,13 +11,13 @@ use Lang;
 class Employees extends Controller
 {
 
-    public $requiredPermissions = ['hambern.company.access_employees'];
+    public $requiredPermissions = ['opiy.company.access_employees'];
 
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('Hambern.Company', 'company', 'employees');
+        BackendMenu::setContext('Opiy.Company', 'company', 'employees');
     }
 
     /**
@@ -35,9 +35,9 @@ class Employees extends Controller
                 $employee->delete();
             }
 
-            Flash::success(Lang::get('hambern.company::lang.employees.delete_selected_success'));
+            Flash::success(Lang::get('opiy.company::lang.employees.delete_selected_success'));
         } else {
-            Flash::error(Lang::get('hambern.company::lang.employees.delete_selected_empty'));
+            Flash::error(Lang::get('opiy.company::lang.employees.delete_selected_empty'));
         }
 
         return $this->listRefresh();

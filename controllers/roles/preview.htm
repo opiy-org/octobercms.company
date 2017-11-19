@@ -1,7 +1,7 @@
 <?php Block::put('breadcrumb') ?>
 <ul>
     <li>
-        <a href="<?= Backend::url('hambern/company/roles') ?>"><?= e(trans('hambern.company::lang.roles.menu_label')) ?></a>
+        <a href="<?= Backend::url('opiy/company/roles') ?>"><?= e(trans('opiy.company::lang.roles.menu_label')) ?></a>
     </li>
     <li><?= e(trans($this->pageTitle)) ?></li>
 </ul>
@@ -16,7 +16,7 @@
 <?php else: ?>
 
 <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-<p><a href="<?= Backend::url('hambern/company/roles') ?>"
-      class="btn btn-default"><?= e(trans('hambern.company::lang.roles.return_to_list')) ?></a></p>
+<p><a href="<?= Backend::url('opiy/company/roles') ?>"
+      class="btn btn-default"><?= e(trans('opiy.company::lang.roles.return_to_list')) ?></a></p>
 
 <?php endif ?>

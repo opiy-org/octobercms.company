@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company\Models;
+<?php namespace Opiy\Company\Models;
 
 /**
  * Project Model
@@ -15,21 +15,26 @@ class Project extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'hambern_company_projects';
+    public $table = 'opiy_company_projects';
     /**
      * @var array Relations
      */
     public $hasOne = [];
-    public $hasMany = [];
+    public $hasMany = [
+        'propertyvalues' => [
+            'Opiy\Company\Models\PropertyValue',
+            'table' => 'opiy_company_pivots',
+        ],
+    ];
     public $belongsTo = [];
     public $belongsToMany = [
         'services' => [
-            'Hambern\Company\Models\Service',
-            'table' => 'hambern_company_pivots',
+            'Opiy\Company\Models\Service',
+            'table' => 'opiy_company_pivots',
         ],
         'tags' => [
-            'Hambern\Company\Models\Tag',
-            'table' => 'hambern_company_pivots',
+            'Opiy\Company\Models\Tag',
+            'table' => 'opiy_company_pivots',
         ],
     ];
     public $morphTo = [];

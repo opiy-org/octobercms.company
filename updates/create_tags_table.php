@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company\Updates;
+<?php namespace Opiy\Company\Updates;
 
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
@@ -8,7 +8,7 @@ class CreateTagsTable extends Migration
 {
     public function up()
     {
-        Schema::create('hambern_company_tags', function (Blueprint $table) {
+        Schema::create('opiy_company_tags', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
@@ -21,6 +21,6 @@ class CreateTagsTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('hambern_company_tags');
+        Schema::dropIfExists('opiy_company_tags');
     }
 }

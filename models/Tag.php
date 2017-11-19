@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company\Models;
+<?php namespace Opiy\Company\Models;
 
 /**
  * Tag Model
@@ -15,7 +15,7 @@ class Tag extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'hambern_company_tags';
+    public $table = 'opiy_company_tags';
     /**
      * @var array Relations
      */
@@ -24,16 +24,16 @@ class Tag extends Model
     public $belongsTo = [];
     public $belongsToMany = [
         'projects' => [
-            'Hambern\Company\Models\Project',
-            'table' => 'hambern_company_pivots',
+            'Opiy\Company\Models\Project',
+            'table' => 'opiy_company_pivots',
         ],
         'services' => [
-            'Hambern\Company\Models\Service',
-            'table' => 'hambern_company_pivots',
+            'Opiy\Company\Models\Service',
+            'table' => 'opiy_company_pivots',
         ],
         'galleries' => [
-            'Hambern\Company\Models\Gallery',
-            'table' => 'hambern_company_pivots',
+            'Opiy\Company\Models\Gallery',
+            'table' => 'opiy_company_pivots',
         ],
     ];
     public $morphTo = [];

@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company\Models;
+<?php namespace Opiy\Company\Models;
 
 /**
  * Testimonial Model
@@ -8,7 +8,7 @@ class Testimonial extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'hambern_company_testimonials';
+    public $table = 'opiy_company_testimonials';
     /**
      * @var array Relations
      */

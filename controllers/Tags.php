@@ -1,9 +1,9 @@
-<?php namespace Hambern\Company\Controllers;
+<?php namespace Opiy\Company\Controllers;
 
 use BackendMenu;
 use Flash;
 use Lang;
-use Hambern\Company\Models\Tag;
+use Opiy\Company\Models\Tag;
 
 /**
  * Tags Back-end Controller
@@ -11,13 +11,13 @@ use Hambern\Company\Models\Tag;
 class Tags extends Controller
 {
 
-    public $requiredPermissions = ['hambern.company.access_services'];
+    public $requiredPermissions = ['opiy.company.access_services'];
 
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('Hambern.Company', 'company', 'tags');
+        BackendMenu::setContext('Opiy.Company', 'company', 'tags');
     }
 
     /**
@@ -32,9 +32,9 @@ class Tags extends Controller
                 $tag->delete();
             }
 
-            Flash::success(Lang::get('hambern.company::lang.tags.delete_selected_success'));
+            Flash::success(Lang::get('opiy.company::lang.tags.delete_selected_success'));
         } else {
-            Flash::error(Lang::get('hambern.company::lang.tags.delete_selected_empty'));
+            Flash::error(Lang::get('opiy.company::lang.tags.delete_selected_empty'));
         }
 
         return $this->listRefresh();

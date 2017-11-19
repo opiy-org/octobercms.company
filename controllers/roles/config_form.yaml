@@ -3,29 +3,29 @@
 # ===================================
 
 # Record name
-name: hambern.company::lang.role.label
+name: opiy.company::lang.role.label
 
 # Model Form Field configuration
-form: $/hambern/company/models/role/fields.yaml
+form: $/opiy/company/models/role/fields.yaml
 
 # Model Class name
-modelClass: Hambern\Company\Models\Role
+modelClass: Opiy\Company\Models\Role
 
 # Default redirect location
-defaultRedirect: hambern/company/roles
+defaultRedirect: opiy/company/roles
 
 # Create page
 create:
-    title: hambern.company::lang.role.create_title
-    redirect: hambern/company/roles/update/:id
-    redirectClose: hambern/company/roles
+    title: opiy.company::lang.role.create_title
+    redirect: opiy/company/roles/update/:id
+    redirectClose: opiy/company/roles
 
 # Update page
 update:
-    title: hambern.company::lang.role.update_title
-    redirect: hambern/company/roles
-    redirectClose: hambern/company/roles
+    title: opiy.company::lang.role.update_title
+    redirect: opiy/company/roles
+    redirectClose: opiy/company/roles
 
 # Preview page
 preview:
-    title: hambern.company::lang.role.preview_title
+    title: opiy.company::lang.role.preview_title

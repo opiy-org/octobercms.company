@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company\Updates;
+<?php namespace Opiy\Company\Updates;
 
 use October\Rain\Database\Updates\Migration;
 use Schema;
@@ -8,7 +8,7 @@ class CreateServicesTable extends Migration
 
     public function up()
     {
-        Schema::create('hambern_company_services', function ($table) {
+        Schema::create('opiy_company_services', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
@@ -21,7 +21,7 @@ class CreateServicesTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('hambern_company_services');
+        Schema::dropIfExists('opiy_company_services');
     }
 
 }

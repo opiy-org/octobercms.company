@@ -1,18 +1,18 @@
 fields:
     name:
-        label: 'hambern.company::lang.labels.name'
+        label: 'opiy.company::lang.labels.name'
         oc.commentPosition: ''
         span: auto
         required: 1
         type: text
     published_at:
-        label: 'hambern.company::lang.labels.published_at'
+        label: 'opiy.company::lang.labels.published_at'
         default: now
         type: datepicker
         mode: date
         span: auto
     slug:
-        label: 'hambern.company::lang.labels.slug'
+        label: 'opiy.company::lang.labels.slug'
         oc.commentPosition: ''
         span: auto
         type: text
@@ -21,10 +21,10 @@ tabs:
         description:
             type: richeditor
             size: giant
-            label: 'hambern.company::lang.labels.description'
+            label: 'opiy.company::lang.labels.description'
             span: full
-            tab: 'hambern.company::lang.labels.description'
+            tab: 'opiy.company::lang.labels.description'
         employees:
             type: partial
-            path: $/hambern/company/controllers/relations/employees.htm
-            tab: 'hambern.company::lang.employees.menu_label'
+            path: $/opiy/company/controllers/relations/employees.htm
+            tab: 'opiy.company::lang.employees.menu_label'

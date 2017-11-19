@@ -1,16 +1,16 @@
-<?php namespace Hambern\Company\Components;
+<?php namespace Opiy\Company\Components;
 
-use Hambern\Company\Models\Role;
+use Opiy\Company\Models\Role;
 
 class Roles extends Component
 {
-    public $table = 'hambern_company_roles';
+    public $table = 'opiy_company_roles';
 
     public function componentDetails()
     {
         return [
-            'name' => 'hambern.company::lang.components.roles.name',
-            'description' => 'hambern.company::lang.components.roles.description',
+            'name' => 'opiy.company::lang.components.roles.name',
+            'description' => 'opiy.company::lang.components.roles.description',
         ];
     }
 

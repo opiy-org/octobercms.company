@@ -1,8 +1,8 @@
-<?php namespace Hambern\Company\Controllers;
+<?php namespace Opiy\Company\Controllers;
 
 use BackendMenu;
 use Flash;
-use Hambern\Company\Models\Project;
+use Opiy\Company\Models\Project;
 use Lang;
 
 /**
@@ -11,13 +11,13 @@ use Lang;
 class Projects extends Controller
 {
 
-    public $requiredPermissions = ['hambern.company.access_projects'];
+    public $requiredPermissions = ['opiy.company.access_projects'];
 
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('Hambern.Company', 'company', 'projects');
+        BackendMenu::setContext('Opiy.Company', 'company', 'projects');
     }
 
     /**
@@ -35,9 +35,9 @@ class Projects extends Controller
                 $project->delete();
             }
 
-            Flash::success(Lang::get('hambern.company::lang.projects.delete_selected_success'));
+            Flash::success(Lang::get('opiy.company::lang.projects.delete_selected_success'));
         } else {
-            Flash::error(Lang::get('hambern.company::lang.projects.delete_selected_empty'));
+            Flash::error(Lang::get('opiy.company::lang.projects.delete_selected_empty'));
         }
 
         return $this->listRefresh();

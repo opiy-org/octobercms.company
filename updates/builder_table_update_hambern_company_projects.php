@@ -1,14 +1,14 @@
-<?php namespace Hambern\Company\Updates;
+<?php namespace Opiy\Company\Updates;
 
-use Hambern\Company\Models\Project;
+use Opiy\Company\Models\Project;
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableUpdateHambernCompanyProjects extends Migration
+class BuilderTableUpdateOpiyCompanyProjects extends Migration
 {
     public function up()
     {
-        Schema::table('hambern_company_projects', function ($table) {
+        Schema::table('opiy_company_projects', function ($table) {
             $table->string('slug')->index();
         });
 
@@ -21,7 +21,7 @@ class BuilderTableUpdateHambernCompanyProjects extends Migration
 
     public function down()
     {
-        Schema::table('hambern_company_projects', function ($table) {
+        Schema::table('opiy_company_projects', function ($table) {
             $table->dropColumn('slug');
         });
     }

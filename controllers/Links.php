@@ -1,9 +1,9 @@
-<?php namespace Hambern\Company\Controllers;
+<?php namespace Opiy\Company\Controllers;
 
 use BackendMenu;
 use Flash;
 use Lang;
-use Hambern\Company\Models\Link;
+use Opiy\Company\Models\Link;
 
 /**
  * Links Back-end Controller
@@ -11,13 +11,13 @@ use Hambern\Company\Models\Link;
 class Links extends Controller
 {
 
-    public $requiredPermissions = ['hambern.company.access_links'];
+    public $requiredPermissions = ['opiy.company.access_links'];
 
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('Hambern.Company', 'company', 'links');
+        BackendMenu::setContext('Opiy.Company', 'company', 'links');
     }
 
     /**
@@ -32,9 +32,9 @@ class Links extends Controller
                 $link->delete();
             }
 
-            Flash::success(Lang::get('hambern.company::lang.links.delete_selected_success'));
+            Flash::success(Lang::get('opiy.company::lang.links.delete_selected_success'));
         } else {
-            Flash::error(Lang::get('hambern.company::lang.links.delete_selected_empty'));
+            Flash::error(Lang::get('opiy.company::lang.links.delete_selected_empty'));
         }
 
         return $this->listRefresh();

@@ -4,13 +4,13 @@
 
 columns:
     id:
-        label: hambern.company::lang.labels.id
+        label: opiy.company::lang.labels.id
     name:
-        label: hambern.company::lang.labels.name
+        label: opiy.company::lang.labels.name
         searchable: true
     published_at:
-        label: hambern.company::lang.labels.published_at
+        label: opiy.company::lang.labels.published_at
         type: date
     updated_at:
-        label: hambern.company::lang.labels.updated_at
+        label: opiy.company::lang.labels.updated_at
         type: date

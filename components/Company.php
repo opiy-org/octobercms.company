@@ -1,8 +1,8 @@
-<?php namespace Hambern\Company\Components;
+<?php namespace Opiy\Company\Components;
 
 use Cms\Classes\ComponentBase;
-use Hambern\Company\Models\Company as Settings;
-use Hambern\Company\Models\Employee;
+use Opiy\Company\Models\Company as Settings;
+use Opiy\Company\Models\Employee;
 use October\Rain\Database\Model;
 
 class Company extends ComponentBase
@@ -11,8 +11,8 @@ class Company extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name' => 'hambern.company::lang.components.company.name',
-            'description' => 'hambern.company::lang.components.company.description',
+            'name' => 'opiy.company::lang.components.company.name',
+            'description' => 'opiy.company::lang.components.company.description',
         ];
     }
 

@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/hambern/company/models/role/columns.yaml
+list: $/opiy/company/models/role/columns.yaml
 
 # Model Class name
-modelClass: Hambern\Company\Models\Role
+modelClass: Opiy\Company\Models\Role
 
 # List Title
-title: hambern.company::lang.role.list_title
+title: opiy.company::lang.role.list_title
 
 # Link URL for each record
-recordUrl: hambern/company/roles/update/:id
+recordUrl: opiy/company/roles/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

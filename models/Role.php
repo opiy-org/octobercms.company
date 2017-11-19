@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company\Models;
+<?php namespace Opiy\Company\Models;
 
 /**
  * Role Model
@@ -15,7 +15,7 @@ class Role extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'hambern_company_roles';
+    public $table = 'opiy_company_roles';
     /**
      * @var array Relations
      */
@@ -24,8 +24,8 @@ class Role extends Model
     public $belongsTo = [];
     public $belongsToMany = [
         'employees' => [
-            'Hambern\Company\Models\Employee',
-            'table' => 'hambern_company_pivots',
+            'Opiy\Company\Models\Employee',
+            'table' => 'opiy_company_pivots',
         ],
     ];
     public $morphTo = [];

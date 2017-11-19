@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company\Controllers;
+<?php namespace Opiy\Company\Controllers;
 
 use Backend\Classes\Controller as BaseController;
 

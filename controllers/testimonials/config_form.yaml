@@ -3,29 +3,29 @@
 # ===================================
 
 # Record name
-name: hambern.company::lang.testimonial.label
+name: opiy.company::lang.testimonial.label
 
 # Model Form Field configuration
-form: $/hambern/company/models/testimonial/fields.yaml
+form: $/opiy/company/models/testimonial/fields.yaml
 
 # Model Class name
-modelClass: Hambern\Company\Models\Testimonial
+modelClass: Opiy\Company\Models\Testimonial
 
 # Default redirect location
-defaultRedirect: hambern/company/testimonials
+defaultRedirect: opiy/company/testimonials
 
 # Create page
 create:
-    title: hambern.company::lang.testimonial.create_title
-    redirect: hambern/company/testimonials/update/:id
-    redirectClose: hambern/company/testimonials
+    title: opiy.company::lang.testimonial.create_title
+    redirect: opiy/company/testimonials/update/:id
+    redirectClose: opiy/company/testimonials
 
 # Update page
 update:
-    title: hambern.company::lang.testimonial.update_title
-    redirect: hambern/company/testimonials
-    redirectClose: hambern/company/testimonials
+    title: opiy.company::lang.testimonial.update_title
+    redirect: opiy/company/testimonials
+    redirectClose: opiy/company/testimonials
 
 # Preview page
 preview:
-    title: hambern.company::lang.testimonial.preview_title
+    title: opiy.company::lang.testimonial.preview_title

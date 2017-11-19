@@ -1,16 +1,16 @@
-<?php namespace Hambern\Company\Components;
+<?php namespace Opiy\Company\Components;
 
-use Hambern\Company\Models\Tag;
+use Opiy\Company\Models\Tag;
 
 class Tags extends Component
 {
-    public $table = 'hambern_company_tags';
+    public $table = 'opiy_company_tags';
 
     public function componentDetails()
     {
         return [
-            'name' => 'hambern.company::lang.components.tags.name',
-            'description' => 'hambern.company::lang.components.tags.description'
+            'name' => 'opiy.company::lang.components.tags.name',
+            'description' => 'opiy.company::lang.components.tags.description'
         ];
     }
 

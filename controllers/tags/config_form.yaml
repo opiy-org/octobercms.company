@@ -3,29 +3,29 @@
 # ===================================
 
 # Record name
-name: hambern.company::lang.tag.label
+name: opiy.company::lang.tag.label
 
 # Model Form Field configuration
-form: $/hambern/company/models/tag/fields.yaml
+form: $/opiy/company/models/tag/fields.yaml
 
 # Model Class name
-modelClass: Hambern\Company\Models\Tag
+modelClass: Opiy\Company\Models\Tag
 
 # Default redirect location
-defaultRedirect: hambern/company/tags
+defaultRedirect: opiy/company/tags
 
 # Create page
 create:
-    title: hambern.company::lang.tag.create_title
-    redirect: hambern/company/tags/update/:id
-    redirectClose: hambern/company/tags
+    title: opiy.company::lang.tag.create_title
+    redirect: opiy/company/tags/update/:id
+    redirectClose: opiy/company/tags
 
 # Update page
 update:
-    title: hambern.company::lang.tag.update_title
-    redirect: hambern/company/tags
-    redirectClose: hambern/company/tags
+    title: opiy.company::lang.tag.update_title
+    redirect: opiy/company/tags
+    redirectClose: opiy/company/tags
 
 # Preview page
 preview:
-    title: hambern.company::lang.tag.preview_title
+    title: opiy.company::lang.tag.preview_title

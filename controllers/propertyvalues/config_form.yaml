@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: opiy.company::lang.propertyvalues.label
+
+# Model Form Field configuration
+form: $/opiy/company/models/propertyvalue/fields.yaml
+
+# Model Class name
+modelClass: Opiy\Company\Models\PropertyValue
+
+# Default redirect location
+defaultRedirect: opiy/company/propertyvalues
+
+# Create page
+create:
+    title: opiy.company::lang.propertyvalues.create_title
+    redirect: opiy/company/propertyvalues/update/:id
+    redirectClose: opiy/company/propertyvalues
+
+# Update page
+update:
+    title: opiy.company::lang.propertyvalues.update_title
+    redirect: opiy/company/propertyvalues
+    redirectClose: opiy/company/propertyvalues
+
+# Preview page
+preview:
+    title: opiy.company::lang.propertyvalues.preview_title

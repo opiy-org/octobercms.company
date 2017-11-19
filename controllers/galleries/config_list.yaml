@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/hambern/company/models/gallery/columns.yaml
+list: $/opiy/company/models/gallery/columns.yaml
 
 # Model Class name
-modelClass: Hambern\Company\Models\Gallery
+modelClass: Opiy\Company\Models\Gallery
 
 # List Title
-title: hambern.company::lang.gallery.list_title
+title: opiy.company::lang.gallery.list_title
 
 # Link URL for each record
-recordUrl: hambern/company/galleries/update/:id
+recordUrl: opiy/company/galleries/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

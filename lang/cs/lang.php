@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Translation of Mattias Hambern 'Company' plugin.
+ * Translation of Mattias Opiy 'Company' plugin.
  *
  * @author Jan Vince (jan@vince.cz)
  * @version 1.1

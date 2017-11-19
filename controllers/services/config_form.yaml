@@ -3,29 +3,29 @@
 # ===================================
 
 # Record name
-name: hambern.company::lang.service.label
+name: opiy.company::lang.service.label
 
 # Model Form Field configuration
-form: $/hambern/company/models/service/fields.yaml
+form: $/opiy/company/models/service/fields.yaml
 
 # Model Class name
-modelClass: Hambern\Company\Models\Service
+modelClass: Opiy\Company\Models\Service
 
 # Default redirect location
-defaultRedirect: hambern/company/services
+defaultRedirect: opiy/company/services
 
 # Create page
 create:
-    title: hambern.company::lang.service.create_title
-    redirect: hambern/company/services/update/:id
-    redirectClose: hambern/company/services
+    title: opiy.company::lang.service.create_title
+    redirect: opiy/company/services/update/:id
+    redirectClose: opiy/company/services
 
 # Update page
 update:
-    title: hambern.company::lang.service.update_title
-    redirect: hambern/company/services
-    redirectClose: hambern/company/services
+    title: opiy.company::lang.service.update_title
+    redirect: opiy/company/services
+    redirectClose: opiy/company/services
 
 # Preview page
 preview:
-    title: hambern.company::lang.service.preview_title
+    title: opiy.company::lang.service.preview_title

@@ -2,68 +2,91 @@
 #  Relation Behavior Config
 # ===================================
 
-services:
-    label: hambern.company::lang.service.label
+
+propertyvalues:
+    label: opiy.company::lang.propertyvalue.label
     manage:
-        form: $/hambern/company/models/project/fields_modal.yaml
-        list: $/hambern/company/models/service/columns.yaml
+        form: $/opiy/company/models/project/fields_modal.yaml
+        list: $/opiy/company/models/propertyvalue/columns.yaml
         showSearch: true
     view:
-        list: $/hambern/company/models/service/columns.yaml
+        list: $/opiy/company/models/propertyvalue/columns.yaml
+        toolbarButtons: add|remove
+        showSearch: true
+
+properties:
+    label: opiy.company::lang.service.label
+    manage:
+        form: $/opiy/company/models/propertyvalue/fields_modal.yaml
+        list: $/opiy/company/models/property/columns.yaml
+        showSearch: true
+    view:
+        list: $/opiy/company/models/property/columns.yaml
+        toolbarButtons: add|remove
+        showSearch: true
+
+services:
+    label: opiy.company::lang.service.label
+    manage:
+        form: $/opiy/company/models/project/fields_modal.yaml
+        list: $/opiy/company/models/service/columns.yaml
+        showSearch: true
+    view:
+        list: $/opiy/company/models/service/columns.yaml
         toolbarButtons: add|remove
         showSearch: true
 
 projects:
-    label: hambern.company::lang.project.label
+    label: opiy.company::lang.project.label
     manage:
-        form: $/hambern/company/models/project/fields_modal.yaml
-        list: $/hambern/company/models/project/columns.yaml
+        form: $/opiy/company/models/project/fields_modal.yaml
+        list: $/opiy/company/models/project/columns.yaml
         showSearch: true
     view:
-        list: $/hambern/company/models/project/columns.yaml
+        list: $/opiy/company/models/project/columns.yaml
         toolbarButtons: add|remove
         showSearch: true
 
 galleries:
-    label: hambern.company::lang.gallery.label
+    label: opiy.company::lang.gallery.label
     manage:
-        form: $/hambern/company/models/project/fields_modal.yaml
-        list: $/hambern/company/models/gallery/columns.yaml
+        form: $/opiy/company/models/project/fields_modal.yaml
+        list: $/opiy/company/models/gallery/columns.yaml
         showSearch: true
     view:
-        list: $/hambern/company/models/gallery/columns.yaml
+        list: $/opiy/company/models/gallery/columns.yaml
         toolbarButtons: add|remove
         showSearch: true
 
 tags:
-    label: hambern.company::lang.tag.label
+    label: opiy.company::lang.tag.label
     manage:
-        form: $/hambern/company/models/tag/fields_modal.yaml
-        list: $/hambern/company/models/tag/columns.yaml
+        form: $/opiy/company/models/tag/fields_modal.yaml
+        list: $/opiy/company/models/tag/columns.yaml
         showSearch: true
     view:
-        list: $/hambern/company/models/tag/columns.yaml
+        list: $/opiy/company/models/tag/columns.yaml
         toolbarButtons: create|add|remove
         showSearch: true
 
 roles:
-    label: hambern.company::lang.role.label
+    label: opiy.company::lang.role.label
     manage:
-        form: $/hambern/company/models/role/fields_modal.yaml
-        list: $/hambern/company/models/role/columns.yaml
+        form: $/opiy/company/models/role/fields_modal.yaml
+        list: $/opiy/company/models/role/columns.yaml
         showSearch: true
     view:
-        list: $/hambern/company/models/role/columns.yaml
+        list: $/opiy/company/models/role/columns.yaml
         toolbarButtons: create|add|remove
         showSearch: true
 
 employees:
-    label: hambern.company::lang.employee.label
+    label: opiy.company::lang.employee.label
     manage:
-        form: $/hambern/company/models/employee/fields_modal.yaml
-        list: $/hambern/company/models/employee/columns.yaml
+        form: $/opiy/company/models/employee/fields_modal.yaml
+        list: $/opiy/company/models/employee/columns.yaml
         showSearch: true
     view:
-        list: $/hambern/company/models/employee/columns.yaml
+        list: $/opiy/company/models/employee/columns.yaml
         toolbarButtons: add|remove
         showSearch: true
