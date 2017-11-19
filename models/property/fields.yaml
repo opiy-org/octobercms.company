@@ -5,25 +5,24 @@ fields:
         span: auto
         required: 1
         type: text
+    value:
+        label: 'opiy.company::lang.labels.value'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
     published_at:
         label: 'opiy.company::lang.labels.published_at'
         type: datepicker
         default: now
         mode: date
         span: auto
-    type:
-        label: 'opiy.company::lang.labels.type'
-        oc.commentPosition: ''
-        span: auto
-        type: text
 tabs:
     fields:
-        description:
-            type: richeditor
-            size: giant
-            label: 'opiy.company::lang.labels.description'
-            span: full
-            tab: 'opiy.company::lang.labels.description'
+         project:
+                    type: partial
+                    path: $/opiy/company/controllers/relations/projects.htm
+                    tab: 'opiy.company::lang.projects.menu_label'
         icon:
             label: 'opiy.company::lang.labels.icon'
             span: left
@@ -31,9 +30,25 @@ tabs:
             comment: 'opiy.company::lang.projects.icon_comment'
             tab: 'opiy.company::lang.labels.description'
             type: text
-        default_value:
-            label: 'opiy.company::lang.labels.default_value'
+        picture:
+            label: 'opiy.company::lang.labels.picture'
+            type: fileupload
+            mode: image
+            span: left
+            imageHeight: 260
+            imageWidth: 260
+            tab: 'opiy.company::lang.labels.attachments'
+        pictures:
+            label: 'opiy.company::lang.labels.pictures'
+            type: fileupload
+            mode: image
             span: right
-            type: text
-            tab: 'opiy.company::lang.labels.description'
-
+            imageHeight: 260
+            imageWidth: 260
+            tab: 'opiy.company::lang.labels.attachments'
+        files:
+            label: 'opiy.company::lang.labels.files'
+            type: fileupload
+            mode: file
+            span: right
+            tab: 'opiy.company::lang.labels.attachments'

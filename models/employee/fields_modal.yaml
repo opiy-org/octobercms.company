@@ -33,7 +33,7 @@ tabs:
         label: opiy.company::lang.labels.born_at
         type: datepicker
         mode: date
-        minDate: 1900-01-01
+        minDate: 1940-01-01
         span: left
         tab: opiy.company::lang.labels.information
     email:

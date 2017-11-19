@@ -13,7 +13,6 @@ class CreatePivotsTable extends Migration
         'role',
         'service',
         'property',
-        'propertyvalue',
         'testimonial',
     ];
 

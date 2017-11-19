@@ -12,12 +12,16 @@ class CreatePropertiesTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
-            $table->string('type')->default('string');
-            $table->string('default_value')->nullable();
             $table->string('icon')->nullable();
-            $table->text('description')->nullable();
+            $table->integer('project_id')->unsigned();
+            $table->string('value')->nullable();
             $table->date('published_at')->nullable();
             $table->nullableTimestamps();
+
+            $table->foreign('project_id')
+                ->references('id')
+                ->on('opiy_company_projects');
+
         });
     }
 

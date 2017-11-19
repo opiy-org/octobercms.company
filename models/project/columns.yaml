@@ -8,8 +8,8 @@ columns:
     name:
         label: opiy.company::lang.labels.name
         searchable: true
-    customer:
-        label: opiy.company::lang.labels.customer
+    style:
+        label: opiy.company::lang.labels.style
         searchable: true
     published_at:
         label: opiy.company::lang.labels.published_at

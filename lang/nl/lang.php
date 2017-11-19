@@ -95,7 +95,7 @@ return [
         'phone' => 'Telefoon',
         'address' => 'Adres',
         'published_at' => 'Gepubliceerd',
-        'customer' => 'Klant',
+        'style' => 'Style',
         'url' => 'Homepage Url',
         'icon' => 'Icoontje',
         'pictures' => 'Afbeeldingen',

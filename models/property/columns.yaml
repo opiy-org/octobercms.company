@@ -5,11 +5,14 @@
 columns:
     id:
         label: opiy.company::lang.labels.id
+    project:
+        label: opiy.company::lang.labels.project
+        searchable: true
     name:
         label: opiy.company::lang.labels.name
         searchable: true
-    type:
-        label: opiy.company::lang.labels.type
+    value:
+        label: opiy.company::lang.labels.value
         searchable: true
     published_at:
         label: opiy.company::lang.labels.published_at

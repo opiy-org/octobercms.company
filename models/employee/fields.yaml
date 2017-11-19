@@ -40,7 +40,7 @@ tabs:
             type: datepicker
             default: 'today - 30 years'
             mode: date
-            minDate: -2208988800
+            minDate: 1940-01-01
             span: left
             tab: 'opiy.company::lang.labels.information'
         email:

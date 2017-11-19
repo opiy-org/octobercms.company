@@ -5,15 +5,25 @@ fields:
         span: auto
         required: 1
         type: text
-    customer:
-        label: 'opiy.company::lang.labels.customer'
+    style:
+        label: 'opiy.company::lang.labels.style'
         span: auto
         type: text
-    url:
-        label: 'opiy.company::lang.labels.url'
+    storeys_total:
+        label: 'opiy.company::lang.labels.storeys_total'
         span: auto
-        default: 'http://'
         type: text
+        required: 1
+    total_area:
+        label: 'opiy.company::lang.labels.total_area'
+        span: auto
+        type: text
+        required: 1
+    price:
+        label: 'opiy.company::lang.labels.price'
+        span: auto
+        type: text
+        required: 1
     published_at:
         label: 'opiy.company::lang.labels.published_at'
         default: now
@@ -33,10 +43,67 @@ tabs:
             label: 'opiy.company::lang.labels.description'
             span: full
             tab: 'opiy.company::lang.labels.description'
-        propertyvalues:
+
+    storeys:
+        label: 'opiy.company::lang.labels.storeys'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    mansard:
+        label: 'opiy.company::lang.labels.mansard'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    basement:
+        label: 'opiy.company::lang.labels.basement'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    garage:
+        label: 'opiy.company::lang.labels.garage'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    pool:
+        label: 'opiy.company::lang.labels.pool'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    sauna:
+        label: 'opiy.company::lang.labels.sauna'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    special_zones:
+        label: 'opiy.company::lang.labels.special_zones'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    bearing_walls:
+        label: 'opiy.company::lang.labels.bearing_walls'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    fasade:
+        label: 'opiy.company::lang.labels.fasade'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    roof_type:
+        label: 'opiy.company::lang.labels.roof_type'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    add_info:
+            type: richeditor
+            size: giant
+            label: 'opiy.company::lang.labels.add_info'
+            span: full
+            tab: 'opiy.company::lang.labels.description'
+        properties:
             type: partial
-            path: $/opiy/company/controllers/relations/propertyvalues.htm
-            tab: 'opiy.company::lang.services.menu_label'
+            path: $/opiy/company/controllers/relations/properties.htm
+            tab: 'opiy.company::lang.properties.menu_label'
         services:
             type: partial
             path: $/opiy/company/controllers/relations/services.htm
@@ -51,6 +118,14 @@ tabs:
             tab: 'opiy.company::lang.labels.attachments'
         pictures:
             label: 'opiy.company::lang.labels.pictures'
+            type: fileupload
+            mode: image
+            span: right
+            imageHeight: 260
+            imageWidth: 260
+            tab: 'opiy.company::lang.labels.attachments'
+        extra_pictures:
+            label: 'opiy.company::lang.labels.extra_pictures'
             type: fileupload
             mode: image
             span: right

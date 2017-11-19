@@ -101,7 +101,7 @@ return [
         'phone' => 'Telefone',
         'address' => 'Endereço',
         'published_at' => 'Publicado',
-        'customer' => 'Cliente',
+        'style' => 'Style',
         'url' => 'Homepage Url',
         'icon' => 'Ícone',
         'pictures' => 'Imagens',

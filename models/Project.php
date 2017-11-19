@@ -21,8 +21,8 @@ class Project extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-        'propertyvalues' => [
-            'Opiy\Company\Models\PropertyValue',
+        'properties' => [
+            'Opiy\Company\Models\Property',
             'table' => 'opiy_company_pivots',
         ],
     ];
@@ -45,6 +45,7 @@ class Project extends Model
     ];
     public $attachMany = [
         'pictures' => ['System\Models\File'],
+        'extra_pictures' => ['System\Models\File'],
         'files' => ['System\Models\File'],
     ];
 

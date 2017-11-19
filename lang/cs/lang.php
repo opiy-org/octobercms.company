@@ -105,7 +105,7 @@ return [
         'email' => 'Email',
         'phone' => 'Telefon',
         'published_at' => 'Publikováno',
-        'customer' => 'Zákazník',
+        'style' => 'Style',
         'url' => 'URL adresa',
         'icon' => 'Ikona',
         'pictures' => 'Obrázky',

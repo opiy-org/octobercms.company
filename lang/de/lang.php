@@ -99,7 +99,7 @@
         'phone' => 'Telefon',
         'address' => 'Adresse',
         'published_at' => 'Veröffentlicht',
-        'customer' => 'Kunde',
+        'style' => 'Style',
         'url' => 'Homepage Url',
         'icon' => 'Icon',
         'pictures' => 'Bilder',

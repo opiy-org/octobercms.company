@@ -1,8 +1,7 @@
 <?php namespace Opiy\Company\Components;
 
-use Opiy\Company\Models\Property;
 use Illuminate\Support\Facades\Lang;
-use Opiy\Company\Models\Tag;
+use Opiy\Company\Models\Property;
 
 class Properties extends Component
 {
@@ -13,8 +12,7 @@ class Properties extends Component
     {
         return [
             'name' => 'opiy.company::lang.components.properties.name',
-            'type' => 'opiy.company::lang.components.properties.type',
-            'description' => 'opiy.company::lang.components.properties.description',
+            'value' => 'opiy.company::lang.components.properties.value',
         ];
     }
 
@@ -29,6 +27,7 @@ class Properties extends Component
         if (!empty($this->property('itemId'))) {
             if ($this->item) return $this->item;
             return $this->item = Property::where($this->property('modelIdentifier', 'id'), $this->property('itemId'))
+                ->with('project', 'picture', 'pictures', 'files')
                 ->first();
         }
     }
@@ -38,7 +37,7 @@ class Properties extends Component
         if (empty($this->property('itemId'))) {
             if ($this->list) return $this->list;
 
-            $properties = Property::published();
+            $properties = Property::published()->with('project', 'picture', 'pictures', 'files');
 
             $properties = $properties->orderBy(
                 $this->property('orderBy', 'id'),

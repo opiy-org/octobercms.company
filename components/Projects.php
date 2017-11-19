@@ -1,7 +1,7 @@
 <?php namespace Opiy\Company\Components;
 
-use Opiy\Company\Models\Project;
 use Illuminate\Support\Facades\Lang;
+use Opiy\Company\Models\Project;
 use Opiy\Company\Models\Tag;
 
 class Projects extends Component
@@ -28,7 +28,7 @@ class Projects extends Component
         if (!empty($this->property('itemId'))) {
             if ($this->item) return $this->item;
             return $this->item = Project::where($this->property('modelIdentifier', 'id'), $this->property('itemId'))
-                ->with('picture', 'pictures', 'files')
+                ->with('picture', 'pictures', 'extra_pictures', 'files')
                 ->first();
         }
     }
@@ -38,7 +38,7 @@ class Projects extends Component
         if (empty($this->property('itemId'))) {
             if ($this->list) return $this->list;
 
-            $projects = Project::published()->with('picture', 'pictures', 'files');
+            $projects = Project::published()->with('picture', 'pictures', 'extra_pictures', 'files');
 
             if ($this->property('filterTag')) {
                 $id_attribute = $this->property('tagIdentifier', 'id');
